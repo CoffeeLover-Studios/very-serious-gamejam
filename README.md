@@ -1,2 +1,2 @@
-#The Very Serious Gamejam - Steampunk puzzle game (WIP)
+#The Very Serious Gamejam
 The files for the gamejam project.
