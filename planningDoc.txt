@@ -1,40 +1,5 @@
 Theme: Spin to win
 
-Engine: Godot
-
-Genre Ideas: 
-
-Platformer
-Horror?
-
-Setting Ideas:
-
-futuristic/cyberpunk
-old fashioned western
-Fantasy
-Post-apocalyptic
-steampunk
-
-
-Gameplay: 
-
-
-Ideas:
-
-- Russian Roulette 
-  (spinning the chamber or something?)
-
-- Spin the bottle (horror theme??)
-
-- propeller hat 
-
-- 
-
-
-
-
-Theme: Spin to win
-
 Game Engine: Godot
 
 Genre: Puzzle game, Escape room
@@ -44,10 +9,24 @@ Setting: Steampunk
 Gameplay:
 
 - Goal is to escape room in each level
-- Use cogs scattered around the room/area to open doors 
-  (maybe more if we have time?)
+
 - timer to add time pressure (maybe have it so the player
   triggers it when picking up a cog?)
+
+- Use gears scattered across level to fix broken machines in room, machines give 
+  items/codes to unlock and get different things in the room
+
+visuals:
+
+for machines:
+- conveyor belts, steam pipes, pulley systems?
+
+- lamps
+- workbenches
+
+- colour coded gears (help player figure out what machine to use gear on)
+
+
 
 
 
