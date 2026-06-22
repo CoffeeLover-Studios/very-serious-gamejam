@@ -1,0 +1,79 @@
+[gd_scene load_steps=7 format=3 uid="uid://d0uje77j5rx3f"]
+
+[ext_resource type="Texture2D" uid="uid://cxljkia4ns82h" path="res://assets/sprites/UI Bar.png" id="1_715fv"]
+[ext_resource type="Texture2D" uid="uid://bjvettet70k8i" path="res://assets/sprites/UI Timer.png" id="2_3gyue"]
+[ext_resource type="Script" path="res://scripts/hotbar.gd" id="2_05tfy"]
+[ext_resource type="PackedScene" uid="uid://c2dykmu0mws8t" path="res://scenes/hotbarSlot.tscn" id="2_drn5f"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_rskej"]
+texture = ExtResource("1_715fv")
+axis_stretch_horizontal = 2
+axis_stretch_vertical = 2
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_6eg3s"]
+texture = ExtResource("2_3gyue")
+axis_stretch_horizontal = 2
+axis_stretch_vertical = 2
+
+[node name="Inventory" type="Control"]
+top_level = true
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_vertical = 8
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="InventoryUI" type="Panel" parent="CanvasLayer"]
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = -33.0
+offset_top = -164.0
+offset_right = 447.0
+offset_bottom = 36.0
+grow_vertical = 0
+size_flags_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_rskej")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/InventoryUI"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -147.5
+offset_top = -130.0
+offset_right = 136.5
+offset_bottom = -60.0
+grow_horizontal = 2
+grow_vertical = 0
+script = ExtResource("2_05tfy")
+
+[node name="Slot" parent="CanvasLayer/InventoryUI/HBoxContainer" instance=ExtResource("2_drn5f")]
+layout_mode = 2
+
+[node name="Slot2" parent="CanvasLayer/InventoryUI/HBoxContainer" instance=ExtResource("2_drn5f")]
+layout_mode = 2
+
+[node name="Slot3" parent="CanvasLayer/InventoryUI/HBoxContainer" instance=ExtResource("2_drn5f")]
+layout_mode = 2
+
+[node name="Slot4" parent="CanvasLayer/InventoryUI/HBoxContainer" instance=ExtResource("2_drn5f")]
+layout_mode = 2
+
+[node name="timerUI" type="Panel" parent="CanvasLayer"]
+top_level = true
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -373.0
+offset_top = -44.0
+offset_right = 107.0
+offset_bottom = 156.0
+grow_horizontal = 0
+theme_override_styles/panel = SubResource("StyleBoxTexture_6eg3s")
