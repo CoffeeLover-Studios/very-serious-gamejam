@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://d4nsttwq1oesu"]
+
+[ext_resource type="AudioStream" uid="uid://b2pp2xnelbjjv" path="res://assets/sounds/When the old Time ends.ogg" id="1_ptyg1"]
+
+[node name="audioController" type="AudioStreamPlayer"]
+stream = ExtResource("1_ptyg1")
+volume_db = -6.559
+autoplay = true

@@ -27,7 +27,15 @@ for machines:
 - colour coded gears (help player figure out what machine to use gear on)
 
 
+To do:
 
+- Walls
+- Create more assets
+- Create machine designs
+- Code functionality for fixing machines
+- Create inventory/hotbar
+- Add music?
+- Come up with game name (gear related?)
 
 
 

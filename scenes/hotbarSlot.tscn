@@ -1,0 +1,27 @@
+[gd_scene load_steps=3 format=3 uid="uid://c2dykmu0mws8t"]
+
+[ext_resource type="Texture2D" uid="uid://cxypfx72og4cx" path="res://assets/sprites/hotbar_Slot.png" id="1_2hhb3"]
+[ext_resource type="Script" path="res://scripts/hotbarSlot.gd" id="2_owwlt"]
+
+[node name="HotbarSlot" type="Button"]
+offset_left = -4.0
+offset_top = -4.0
+offset_right = 64.0
+offset_bottom = 66.0
+icon = ExtResource("1_2hhb3")
+flat = true
+script = ExtResource("2_owwlt")
+
+[node name="CenterContainer" type="CenterContainer" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 2.5
+anchor_top = 2.5
+anchor_right = 5.0
+anchor_bottom = 5.25
+offset_left = 17.0
+offset_top = 7.0
+offset_right = 57.0
+offset_bottom = 47.0
+grow_horizontal = 2
+grow_vertical = 2
