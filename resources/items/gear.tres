@@ -1,11 +1,11 @@
 [gd_resource type="Resource" script_class="Item" load_steps=3 format=3 uid="uid://oye7aty3w4ps"]
 
-[ext_resource type="Texture2D" uid="uid://03ke1wirxgx6" path="res://assets/sprites/Gear_Inventory_1.png" id="1_e88qf"]
+[ext_resource type="Texture2D" uid="uid://xgtlmko6junq" path="res://assets/sprites/gears/gear_1_inventory.png" id="1_hucy0"]
 [ext_resource type="Script" path="res://scripts/Item.gd" id="2_d12hx"]
 
 [resource]
 script = ExtResource("2_d12hx")
-icon = ExtResource("1_e88qf")
+icon = ExtResource("1_hucy0")
 name = "Gear"
 type = "Gear"
 description = "A large copper gear, it's rather heavy.."

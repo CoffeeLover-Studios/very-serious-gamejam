@@ -1,11 +1,11 @@
 [gd_resource type="Resource" script_class="Item" load_steps=3 format=3 uid="uid://cbc2o2ranya8h"]
 
-[ext_resource type="Texture2D" uid="uid://cpixj6i25esg1" path="res://assets/sprites/testSprite.png" id="1_jv1a2"]
+[ext_resource type="Texture2D" uid="uid://crstnabyeemdt" path="res://assets/sprites/Key.png" id="1_cak4c"]
 [ext_resource type="Script" path="res://scripts/Item.gd" id="2_ooeca"]
 
 [resource]
 script = ExtResource("2_ooeca")
-icon = ExtResource("1_jv1a2")
+icon = ExtResource("1_cak4c")
 name = "Key"
 type = "Key"
 description = "A small metal key, it looks like this can open something."

@@ -1,10 +1,11 @@
-[gd_scene load_steps=18 format=3 uid="uid://b06ywpkrc8kap"]
+[gd_scene load_steps=20 format=3 uid="uid://b06ywpkrc8kap"]
 
 [ext_resource type="Script" path="res://scripts/CharacterBody2D.gd" id="1_4rusj"]
 [ext_resource type="Texture2D" uid="uid://dsgrd6xpdqx0t" path="res://assets/sprites/player_spritesheet.png" id="2_0ykpk"]
 [ext_resource type="Texture2D" uid="uid://dc8uifgidusga" path="res://assets/sprites/Shadow.png" id="3_iguh2"]
 [ext_resource type="PackedScene" uid="uid://t074yqeutang" path="res://scenes/slot.tscn" id="4_6fgek"]
-[ext_resource type="Resource" uid="uid://oye7aty3w4ps" path="res://resources/items/gear.tres" id="5_r1hwd"]
+[ext_resource type="Script" path="res://scripts/Hotbar.gd" id="4_bxcf7"]
+[ext_resource type="Texture2D" uid="uid://cxljkia4ns82h" path="res://assets/sprites/UI Bar.png" id="6_7q7r6"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_luwx5"]
 size = Vector2(12, 8)
@@ -111,6 +112,10 @@ animations = [{
 "speed": 6.0
 }]
 
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_s11y2"]
+texture = ExtResource("6_7q7r6")
+modulate_color = Color(1, 1, 1, 0.627451)
+
 [node name="CharacterBody2D" type="CharacterBody2D"]
 collision_mask = 2
 script = ExtResource("1_4rusj")
@@ -130,7 +135,7 @@ texture = ExtResource("3_iguh2")
 offset = Vector2(0, 10)
 
 [node name="Camera2D" type="Camera2D" parent="."]
-zoom = Vector2(4, 4)
+zoom = Vector2(3, 3)
 process_callback = 0
 position_smoothing_enabled = true
 
@@ -142,13 +147,43 @@ anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = -75.0
-offset_top = -150.0
-offset_right = 75.0
+offset_left = -233.0
+offset_top = -148.0
+offset_right = 337.0
+offset_bottom = 2.0
 grow_horizontal = 2
 grow_vertical = 0
 size_flags_vertical = 8
+theme_override_constants/separation = 20
+script = ExtResource("4_bxcf7")
 
 [node name="slot" parent="UI/Hotbar" instance=ExtResource("4_6fgek")]
 layout_mode = 2
-stats = ExtResource("5_r1hwd")
+
+[node name="slot2" parent="UI/Hotbar" instance=ExtResource("4_6fgek")]
+layout_mode = 2
+
+[node name="slot3" parent="UI/Hotbar" instance=ExtResource("4_6fgek")]
+layout_mode = 2
+
+[node name="slot4" parent="UI/Hotbar" instance=ExtResource("4_6fgek")]
+layout_mode = 2
+
+[node name="Panel" type="Panel" parent="UI"]
+z_index = -1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -414.0
+offset_top = -270.0
+offset_right = 414.0
+offset_bottom = 75.0
+grow_horizontal = 2
+grow_vertical = 0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_styles/panel = SubResource("StyleBoxTexture_s11y2")
+
+[node name="Weapons" type="Node2D" parent="."]

@@ -1,6 +1,7 @@
 extends CharacterBody2D
 
 @onready var animated_sprite_2d = $AnimatedSprite2D
+@onready var hotbar = $UI/Hotbar
 
 const SPEED = 70.0
 
@@ -35,3 +36,7 @@ func _physics_process(delta):
 		animated_sprite_2d.play("Idle")
 
 	move_and_slide()
+	
+#function for adding items to the hotbar
+func add_item(stats):
+	hotbar.add_item(stats)
