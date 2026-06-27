@@ -1,0 +1,82 @@
+[gd_scene load_steps=7 format=3 uid="uid://ea562x0xvmv8"]
+
+[ext_resource type="Texture2D" uid="uid://bjvettet70k8i" path="res://assets/sprites/UI Timer.png" id="1_fkfot"]
+[ext_resource type="Script" path="res://scripts/timer.gd" id="1_wbjcx"]
+[ext_resource type="FontFile" uid="uid://jx8854sm7g53" path="res://assets/fonts/PublicPixel.ttf" id="3_fchg7"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_rj2fd"]
+texture = ExtResource("1_fkfot")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jnbwx"]
+bg_color = Color(0.219608, 0.145098, 0.0627451, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+shadow_size = 2
+shadow_offset = Vector2(0, 2)
+anti_aliasing = false
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5a147"]
+bg_color = Color(0.917647, 0.866667, 0.419608, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.219608, 0.145098, 0.0627451, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+anti_aliasing = false
+
+[node name="UI" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_wbjcx")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Panel" type="Panel" parent="CanvasLayer"]
+offset_left = -134.0
+offset_top = -49.0
+offset_right = 394.0
+offset_bottom = 171.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_rj2fd")
+
+[node name="ProgressBar" type="ProgressBar" parent="CanvasLayer/Panel"]
+layout_mode = 0
+offset_left = 190.0
+offset_top = 113.0
+offset_right = 429.0
+offset_bottom = 138.0
+theme_override_styles/background = SubResource("StyleBoxFlat_jnbwx")
+theme_override_styles/fill = SubResource("StyleBoxFlat_5a147")
+max_value = 600.0
+value = 600.0
+show_percentage = false
+
+[node name="text" type="Label" parent="CanvasLayer/Panel"]
+layout_mode = 0
+offset_left = 190.0
+offset_top = 87.0
+offset_right = 370.0
+offset_bottom = 119.0
+theme_override_colors/font_color = Color(0.917647, 0.866667, 0.419608, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_y = 2
+theme_override_constants/outline_size = 3
+theme_override_constants/shadow_outline_size = 1
+theme_override_fonts/font = ExtResource("3_fchg7")
+theme_override_font_sizes/font_size = 12
+text = "Time Remaining:"
+
+[node name="Timer" type="Timer" parent="."]
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

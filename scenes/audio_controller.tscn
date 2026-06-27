@@ -1,11 +1,11 @@
 [gd_scene load_steps=4 format=3 uid="uid://d4nsttwq1oesu"]
 
-[ext_resource type="AudioStream" uid="uid://b2pp2xnelbjjv" path="res://assets/sounds/When the old Time ends.ogg" id="1_ptyg1"]
+[ext_resource type="AudioStream" uid="uid://b2pp2xnelbjjv" path="res://assets/music/When the old Time ends.ogg" id="1_xux7l"]
 [ext_resource type="AudioStream" uid="uid://bnki8upxa5rbw" path="res://assets/sounds/big-room-ambience-3-22549.mp3" id="2_im6oh"]
 [ext_resource type="AudioStream" uid="uid://dcxmkgeb3slk5" path="res://assets/sounds/clock-in-room-26580.mp3" id="3_sv7px"]
 
 [node name="audioController" type="AudioStreamPlayer"]
-stream = ExtResource("1_ptyg1")
+stream = ExtResource("1_xux7l")
 volume_db = -20.613
 autoplay = true
 
@@ -17,5 +17,4 @@ autoplay = true
 [node name="AudioStreamPlayer2" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("3_sv7px")
 volume_db = -14.054
-pitch_scale = 0.8
 autoplay = true

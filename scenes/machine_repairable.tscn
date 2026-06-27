@@ -1,0 +1,28 @@
+[gd_scene load_steps=5 format=3 uid="uid://bdmcx2yhfc8bc"]
+
+[ext_resource type="Texture2D" uid="uid://cpixj6i25esg1" path="res://assets/sprites/testSprite.png" id="1_jydmf"]
+[ext_resource type="Script" path="res://scripts/machine_repairable.gd" id="2_2dtwy"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ncged"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_jydmf")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rqysr"]
+size = Vector2(28.4444, 28.4444)
+
+[node name="machine_repairable" type="AnimatedSprite2D"]
+scale = Vector2(1.125, 1.125)
+sprite_frames = SubResource("SpriteFrames_ncged")
+script = ExtResource("2_2dtwy")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("RectangleShape2D_rqysr")
